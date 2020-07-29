@@ -9,3 +9,7 @@ Often candidates wonder what words are important that will be capture the attent
 * TermFrequency - shows how frequently an expression (term, word) occurs in a document.
 
 Result:
+
+Used word cloud to visualize the top 20 keywords from job description.
+
+<img src="wordcloud.png" height=200>
