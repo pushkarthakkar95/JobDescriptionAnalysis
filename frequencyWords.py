@@ -367,9 +367,19 @@ tf_allDocuments = computer_Tf_all(numOfWordsDict, without_stop_words)
 merged = merge_all_tfidf(tf_allDocuments)
 
 sorted_a = OrderedDict(sorted(merged.items(), key=lambda kv: kv[1], reverse=True))
-list_words =list(sorted_a.keys())
-for i in range(0, 30):
-    print(list_words[i])
+list_words = list(sorted_a.keys())
+list_values = list(sorted_a.values())
+top_20_keys = []
+for i in range(0, 20):
+    top_20_keys.append(list_words[i])
+
+
+listToString = (" ").join(top_20_keys)
+wc = WordCloud(width=800, height=400, max_words=200).generate(listToString)
+# Display the generated image:
+plt.imshow(wc, interpolation='bilinear')
+plt.axis("off")
+plt.show()
 
 
 
